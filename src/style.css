@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: #f4f4f4;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 7.5rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-bottom: #cc2f2a solid 3px;
+  padding: 1rem;
+  z-index: 10;
+}
+
+nav img {
+  display: flex;
+  margin-left: 5rem;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 3rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.5rem;
+  padding: 2rem;
+  color: #000000;
+}
+
+.nav-list a:hover {
+  color: #cc2f2a;
+  text-decoration: underline #cc2f2a;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f4;
+  background-image: radial-gradient(
+      rgba(180, 180, 180, 0.9),
+      rgba(150, 150, 150, 0.5)
+    ),
+    url(https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-section > h1 {
+  color: #ffffff;
+}
+
+.welcome-section > p {
+  font-size: 3.75rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #cc2f2a;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem 0 2rem;
+}
+
+.projects-section-header {
+  max-width: 64rem;
+  margin: 0 auto 6rem auto;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+  max-width: 128rem;
+  margin: 0 auto 5rem auto;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-tile img {
+  display: block;
+  width: 100%;
+}
+
+.project-tile {
+  background: #b4b4b4;
+  border-radius: 3px;
+  margin: 1.5rem;
+  max-width: 50rem;
+}
+
+.code {
+  color: #b4b4b4;
+  transition: color 0.3s ease-out;
+}
+
+.project-tile:hover .code {
+  color: #cc2f2a;
+}
+
+.project-image {
+  width: 100%;
+  border-bottom: #cc2f2a solid 3px;
+}
+
+.project-title {
+  font-size: 1.75rem;
+  padding: 1rem 0.5rem;
+  color: #000000;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  font-size: 2rem;
+  background-color: #b4b4b4;
+  color: #000000;
+}
+
+.im-project-size {
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  background: #cc2f2a;
+  color: #ffffff;
+}
+
+.btn > i {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.btn:hover > i {
+  transform: translateX(2px);
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  margin-bottom: 0;
+  border-bottom: #cc2f2a solid 3px;
+}
+
+.contact-section-header > h2 {
+  margin: 0 auto 3rem auto;
+}
+
+.contact-section-header > h3 > a {
+  color: #cc2f2a;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: #cc2f2a;
+  padding: 2rem 3rem;
+  display: inline-block;
+}
+
+.im-contact-size {
+  font-size: 5em;
+}
+
+footer {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2.5rem;
+}
